@@ -1,5 +1,7 @@
 package chapter1.soc;
 
+import chapter1.model.User;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

@@ -1,5 +1,7 @@
 package chapter1.firstdao;
 
+import chapter1.model.User;
+
 import java.sql.*;
 
 // DB연결을 위한 Connection을 가져온다

@@ -1,5 +1,7 @@
 package chapter1.soc;
 
+import chapter1.model.User;
+
 import java.sql.*;
 
 // 관심사의 분리 => 관심이 같은 것 끼리는 하나의 객체 안으로 또는 친한 객체로 모이게 한다
