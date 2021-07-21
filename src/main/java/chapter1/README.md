@@ -13,3 +13,5 @@
 ## 2. DAO의 분리 (soc package => SoC: Sepration of Concerns)
 
 ## 3. DAO의 확장 (expansion package)
+
+## 4. 제어의 역전 (ioc package => IoC : Inversion of Control)
