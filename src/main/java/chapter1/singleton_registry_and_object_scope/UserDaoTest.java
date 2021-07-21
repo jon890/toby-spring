@@ -1,6 +1,6 @@
 package chapter1.singleton_registry_and_object_scope;
 
-import chapter1.model.User;
+import model.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

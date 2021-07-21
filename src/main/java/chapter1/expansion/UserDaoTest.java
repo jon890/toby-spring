@@ -2,7 +2,7 @@ package chapter1.expansion;
 
 import chapter1.connection.ConnectionMaker;
 import chapter1.connection.PostgreSqlConnectionManager;
-import chapter1.model.User;
+import model.User;
 
 import java.sql.SQLException;
 

@@ -1,7 +1,7 @@
 package chapter1.singleton_registry_and_object_scope;
 
 import chapter1.connection.ConnectionMaker;
-import chapter1.model.User;
+import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,7 +1,6 @@
 package chapter1.configuration;
 
-import chapter1.connection.ConnectionMaker;
-import chapter1.model.User;
+import model.User;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

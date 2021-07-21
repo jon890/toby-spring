@@ -1,4 +1,4 @@
-package chapter1.model;
+package model;
 
 public class User {
     String id;

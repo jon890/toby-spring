@@ -1,6 +1,6 @@
 package chapter1.ioc;
 
-import chapter1.model.User;
+import model.User;
 
 import java.sql.SQLException;
 
