@@ -1,7 +1,7 @@
 package chapter1.ioc;
 
-import chapter1.ioc.connection.ConnectionMaker;
-import chapter1.ioc.connection.PostgreSqlConnectionManager;
+import chapter1.connection.ConnectionMaker;
+import chapter1.connection.PostgreSqlConnectionManager;
 
 public class DaoFactory {
 

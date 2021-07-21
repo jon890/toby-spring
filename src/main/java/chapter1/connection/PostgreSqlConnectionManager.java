@@ -1,4 +1,4 @@
-package chapter1.ioc.connection;
+package chapter1.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

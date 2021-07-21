@@ -1,6 +1,6 @@
 package chapter1.ioc;
 
-import chapter1.ioc.connection.ConnectionMaker;
+import chapter1.connection.ConnectionMaker;
 import chapter1.model.User;
 
 import java.sql.Connection;
