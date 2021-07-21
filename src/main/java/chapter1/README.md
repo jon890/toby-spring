@@ -19,3 +19,5 @@
 ## 5. 스프링의 IoC (spring_ioc package)
 
 ## 6. 싱글톤 레지스트리와 오브젝트 스코프 (singleton_registry_and_object_scope package)
+
+## 7. 의존관계 주입 (di package)
