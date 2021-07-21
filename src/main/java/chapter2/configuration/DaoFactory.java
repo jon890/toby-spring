@@ -1,5 +1,6 @@
-package chapter2.dao;
+package chapter2.configuration;
 
+import chapter2.dao.UserDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;

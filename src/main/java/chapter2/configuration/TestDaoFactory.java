@@ -1,4 +1,4 @@
-package chapter2.dao;
+package chapter2.configuration;
 
 import chapter2.dao.UserDao;
 import org.springframework.context.annotation.Bean;

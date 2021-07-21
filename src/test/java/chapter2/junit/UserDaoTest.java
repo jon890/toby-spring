@@ -1,6 +1,6 @@
 package chapter2.junit;
 
-import chapter2.dao.DaoFactory;
+import chapter2.configuration.DaoFactory;
 import chapter2.dao.UserDao;
 import model.User;
 import org.junit.jupiter.api.BeforeAll;
