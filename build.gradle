@@ -9,10 +9,25 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    springVersion = '5.3.9'
+}
+
 dependencies {
     // postgresql JDBC Driver
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation 'org.postgresql:postgresql:42.2.23'
+
+    // Logging
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+    implementation 'commons-logging:commons-logging:1.2'
+
+    // Spring
+    implementation "org.springframework:spring-beans:$springVersion"
+    implementation "org.springframework:spring-context:$springVersion"
+    implementation "org.springframework:spring-core:$springVersion"
+    implementation "org.springframework:spring-expression:$springVersion"
+
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
