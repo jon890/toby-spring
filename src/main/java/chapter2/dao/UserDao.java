@@ -1,4 +1,4 @@
-package chapter1.configuration;
+package chapter2.dao;
 
 import model.User;
 

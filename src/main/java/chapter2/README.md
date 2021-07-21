@@ -9,4 +9,6 @@
 - 2장에서는 테스트란 무엇이며, 그 가치와 장점, 활용 전략, 스프링과의 관계를 살펴본다
 - 그리고 이 책에서 활용할 대표적인 테스트 프레임워크르 소개하고, 이를 이용한 학습 전략도 알아볼 것이다
 
-## 1 UserDaoTest 다시 보기 (review package)
+## 1. UserDaoTest 다시 보기 (review package)
+
+## 2. UserDaoTest 개선 (improve package)

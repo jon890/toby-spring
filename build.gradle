@@ -29,7 +29,7 @@ dependencies {
     implementation "org.springframework:spring-expression:$springVersion"
     implementation "org.springframework:spring-jdbc:$springVersion"
 
-
+    // Test
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
