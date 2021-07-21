@@ -1,6 +1,7 @@
 package chapter2.dao;
 
 import model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 
 import javax.sql.DataSource;
@@ -11,9 +12,18 @@ import java.sql.SQLException;
 
 public class UserDao {
 
-    private final DataSource dataSource;
+    private DataSource dataSource;
 
+    // 생성자 주입 => 추천
+    // 1. NullPointerException 방지
+    // 2. 인스턴스 변수를 final로 선언 가능
+    @Autowired
     public UserDao(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    // 수정자 주입 => 비 추천
+    public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 

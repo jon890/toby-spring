@@ -32,6 +32,9 @@ dependencies {
     // Test
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    // Spring Test
+    testImplementation "org.springframework:spring-test:$springVersion"
 }
 
 test {
