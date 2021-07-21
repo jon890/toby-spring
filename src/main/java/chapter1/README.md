@@ -17,3 +17,5 @@
 ## 4. 제어의 역전 (ioc package => IoC : Inversion of Control)
 
 ## 5. 스프링의 IoC (spring_ioc package)
+
+## 6. 싱글톤 레지스트리와 오브젝트 스코프 (singleton_registry_and_object_scope package)
