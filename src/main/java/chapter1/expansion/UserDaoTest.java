@@ -1,5 +1,7 @@
 package chapter1.expansion;
 
+import chapter1.expansion.connection.ConnectionMaker;
+import chapter1.expansion.connection.PostgreSqlConnectionManager;
 import chapter1.model.User;
 
 import java.sql.SQLException;
@@ -9,7 +11,7 @@ public class UserDaoTest {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         // UserDao가 사용할 ConnectionMaker 구현 클래스를 결정하고 객체를 만든다
         ConnectionMaker connectionMaker = new PostgreSqlConnectionManager();
-        
+
         // 1. UserDao 생성
         // 2. 사용할 ConnectionMaker 타입의 객체 전달 => 결국 두 객체 사이의 의존관계 설정 효과
         UserDao dao = new UserDao(connectionMaker);

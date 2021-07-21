@@ -1,10 +1,10 @@
-package chapter1.expansion;
+package chapter1.ioc.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class PostgreSqlConnectionManager implements ConnectionMaker{
+public class PostgreSqlConnectionManager implements ConnectionMaker {
 
     @Override
     public Connection makeConnection() throws ClassNotFoundException, SQLException {

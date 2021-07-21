@@ -1,5 +1,6 @@
 package chapter1.expansion;
 
+import chapter1.expansion.connection.ConnectionMaker;
 import chapter1.model.User;
 
 import java.sql.Connection;

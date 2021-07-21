@@ -1,4 +1,4 @@
-package chapter1.expansion;
+package chapter1.expansion.connection;
 
 import java.sql.Connection;
 import java.sql.SQLException;
