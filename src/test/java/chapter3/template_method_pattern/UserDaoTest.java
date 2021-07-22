@@ -1,6 +1,5 @@
 package chapter3.template_method_pattern;
 
-import chapter3.review.UserDao;
 import model.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
