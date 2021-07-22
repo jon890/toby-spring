@@ -10,3 +10,5 @@
 - 3장에서는 스프링에 적용된 템플릿 기법을 살펴보고, 이를 적용해 완성도 있는 DAO 코드를 만드는 방법을 알아보자
 
 ## 1. 다시보는 초난감 DAO (review package)
+
+## 2. 변하는 것과 변하지 않는 것 (template_method_pattern package)
