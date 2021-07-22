@@ -1,4 +1,4 @@
-package chapter3.template_method_pattern;
+package chapter3.strategy_pattern;
 
 import model.User;
 import org.junit.jupiter.api.BeforeEach;

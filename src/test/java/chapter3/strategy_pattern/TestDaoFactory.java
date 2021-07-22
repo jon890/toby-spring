@@ -1,4 +1,4 @@
-package chapter3.template_method_pattern;
+package chapter3.strategy_pattern;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

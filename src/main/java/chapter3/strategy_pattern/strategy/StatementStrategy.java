@@ -1,4 +1,4 @@
-package chapter3.template_method_pattern.strategy;
+package chapter3.strategy_pattern.strategy;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

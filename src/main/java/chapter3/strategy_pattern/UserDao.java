@@ -1,7 +1,7 @@
-package chapter3.template_method_pattern;
+package chapter3.strategy_pattern;
 
-import chapter3.template_method_pattern.strategy.DeleteAllStatement;
-import chapter3.template_method_pattern.strategy.StatementStrategy;
+import chapter3.strategy_pattern.strategy.DeleteAllStatement;
+import chapter3.strategy_pattern.strategy.StatementStrategy;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;

@@ -11,4 +11,4 @@
 
 ## 1. 다시보는 초난감 DAO (review package)
 
-## 2. 변하는 것과 변하지 않는 것 (template_method_pattern package)
+## 2. 변하는 것과 변하지 않는 것 (strategy_pattern package)
