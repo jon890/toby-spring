@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {TestDaoFactory.class}) // 테스트에서 사용할 설정정보를 분리
-@DirtiesContext
 public class UserDaoTest {
 
     @Autowired

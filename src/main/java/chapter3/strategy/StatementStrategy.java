@@ -1,4 +1,4 @@
-package chapter3.optimization.strategy;
+package chapter3.strategy;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

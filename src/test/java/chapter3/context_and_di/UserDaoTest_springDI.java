@@ -1,4 +1,4 @@
-package chapter3.strategy_pattern;
+package chapter3.context_and_di;
 
 import model.User;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,14 +17,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {TestDaoFactory.class}) // 테스트에서 사용할 설정정보를 분리
-public class UserDaoTest {
+@ContextConfiguration(classes = {TestDaoFactory_springDI.class})
+public class UserDaoTest_springDI {
 
     @Autowired
     private ApplicationContext context;
 
     @Autowired
-    private UserDao dao;
+    private UserDao_springDI dao;
 
     private User user1;
     private User user2;

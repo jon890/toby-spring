@@ -1,6 +1,6 @@
 package chapter3.optimization;
 
-import chapter3.optimization.strategy.StatementStrategy;
+import chapter3.strategy.StatementStrategy;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;

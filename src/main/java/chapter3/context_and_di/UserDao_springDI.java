@@ -1,6 +1,5 @@
-package chapter3.strategy_pattern;
+package chapter3.context_and_di;
 
-import chapter3.strategy.StatementStrategy;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -11,45 +10,27 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao {
+public class UserDao_springDI {
 
     private final DataSource dataSource;
+    private final JdbcContext jdbcContext;
 
     @Autowired
-    public UserDao(DataSource dataSource) {
+    public UserDao_springDI(DataSource dataSource, JdbcContext jdbcContext) {
         this.dataSource = dataSource;
+        this.jdbcContext = jdbcContext;
     }
 
     public void add(User user) throws SQLException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
+        jdbcContext.workWithStatementStrategy(connection -> {
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into users(id, name, password) values(?,?,?)");
 
-        try {
-            connection = dataSource.getConnection();
-            preparedStatement = connection.prepareStatement("insert into users(id, name, password) values(?,?,?)");
             preparedStatement.setString(1, user.getId());
             preparedStatement.setString(2, user.getName());
             preparedStatement.setString(3, user.getPassword());
-            preparedStatement.execute();
-        } catch (SQLException e) {
-            throw e;
-        } finally {
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
 
-                }
-            }
-
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-
-                }
-            }
-        }
+            return preparedStatement;
+        });
     }
 
     public User get(String id) throws SQLException {
@@ -109,9 +90,7 @@ public class UserDao {
     }
 
     public void deleteAll() throws SQLException {
-        // 클라이언트가 컨텍스트가 사용할 전략을 정해서 전달하는 면에서 DI 구조라고 이해할 수 있다
-        StatementStrategy strategy = new DeleteAllStatement();
-        jdbcContextWithStatementStrategy(strategy);
+        jdbcContext.workWithStatementStrategy(connection -> connection.prepareStatement("delete from users"));
     }
 
     public int getCount() throws SQLException {
@@ -138,37 +117,6 @@ public class UserDao {
                 }
             }
 
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-
-                }
-            }
-
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-
-                }
-            }
-        }
-    }
-
-    public void jdbcContextWithStatementStrategy(StatementStrategy statementStrategy) throws SQLException {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
-        try {
-            connection = dataSource.getConnection();
-
-            preparedStatement = statementStrategy.makePreparedStatement(connection);
-
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            throw e;
-        } finally {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
