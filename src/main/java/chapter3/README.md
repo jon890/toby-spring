@@ -12,3 +12,5 @@
 ## 1. 다시보는 초난감 DAO (review package)
 
 ## 2. 변하는 것과 변하지 않는 것 (strategy_pattern package)
+
+## 3. JDBC 전략 패턴의 최적화 (optimization package)
