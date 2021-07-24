@@ -3,6 +3,7 @@ package chapter3.spring_jdbcTemplate;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.Types;
 import java.util.List;
@@ -10,6 +11,9 @@ import java.util.List;
 public class UserDao {
 
     private final JdbcTemplate jdbcTemplate;
+    private final RowMapper<User> userRowMapper = (rs, rowNum) -> new User(rs.getString("id"),
+            rs.getString("name"),
+            rs.getString("password"));
 
     @Autowired
     public UserDao(JdbcTemplate jdbcTemplate) {
@@ -27,9 +31,7 @@ public class UserDao {
         return jdbcTemplate.queryForObject("select * from users where id = ?",
                 new Object[]{id},
                 new int[]{Types.VARCHAR},
-                (rs, rowNum) -> new User(rs.getString("id"),
-                        rs.getString("name"),
-                        rs.getString("password")));
+                userRowMapper);
     }
 
     public void deleteAll() {
@@ -43,8 +45,6 @@ public class UserDao {
     }
 
     public List<User> getAll() {
-        return jdbcTemplate.query("select * from users order by id", (rs, rowNum) -> new User(rs.getString("id"),
-                rs.getString("name"),
-                rs.getString("password")));
+        return jdbcTemplate.query("select * from users order by id", userRowMapper);
     }
 }

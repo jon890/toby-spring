@@ -80,6 +80,9 @@ public class UserDaoTest {
     public void 모든_사용자_가져오기() {
         dao.deleteAll();
 
+        List<User> users0 = dao.getAll();
+        assertEquals(users0.size(), 0);
+
         dao.add(user1);
         List<User> users1 = dao.getAll();
         assertEquals(users1.size(), 1);
