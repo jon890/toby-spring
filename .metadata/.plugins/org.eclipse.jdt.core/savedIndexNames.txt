@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/Users/gimbyeongtae/Documents/spring-study-safy/.metadata/.plugins/org.eclipse.jdt.core
-4170406037.index
-1865797976.index
